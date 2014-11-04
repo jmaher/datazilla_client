@@ -239,7 +239,7 @@ class DatazillaRequest(DatazillaResultsCollection):
         user = self.project
 
         params = {
-            'data': urllib.quote(json.dumps(dataset)),
+            'data': urlparse.quote(json.dumps(dataset)),
         }
 
         use_oauth = bool(self.oauth_key and self.oauth_secret)
