@@ -7,11 +7,15 @@ import oauthlib as oauth
 import time
 import urllib
 from copy import deepcopy
-from urlparse import urlparse
+
+try:
+    from urlparse import urlparse
+except:
+    import urllib.parse as urlparse
 try:
     import httplib
 except:
-    import http.client
+    import http.client as httplib
 
 try:
     import json
