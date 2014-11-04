@@ -3,12 +3,15 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import inspect
-import httplib
 import oauthlib as oauth
 import time
 import urllib
 from copy import deepcopy
 from urlparse import urlparse
+try:
+    import httplib
+except:
+    import http.client
 
 try:
     import json
