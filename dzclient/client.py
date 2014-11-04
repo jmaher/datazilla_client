@@ -5,7 +5,6 @@
 import inspect
 import oauthlib as oauth
 import time
-import urllib
 from copy import deepcopy
 
 try:
@@ -273,7 +272,7 @@ class DatazillaRequest(DatazillaResultsCollection):
             req.sign_request(signature_method, consumer, token)
             body = req.to_postdata()
         else:
-            body = urllib.urlencode(params)
+            body = urlparse.urlencode(params)
 
         # Build the header
         header = {'Content-type': 'application/x-www-form-urlencoded'}
