@@ -255,8 +255,8 @@ class DatazillaRequest(DatazillaResultsCollection):
             try:
                 req = oauth.Request(method="POST", url=uri, parameters=params)
             except AssertionError:
-                print 'uri: %s' % uri
-                print 'params: %s' % params
+                print('uri: %s' % uri)
+                print('params: %s' % params)
                 raise
 
             # Set the signature
