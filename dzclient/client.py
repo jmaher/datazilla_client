@@ -4,7 +4,7 @@
 
 import inspect
 import httplib
-import oauth2 as oauth
+import oauthlib as oauth
 import time
 import urllib
 from copy import deepcopy
@@ -254,7 +254,7 @@ class DatazillaRequest(DatazillaResultsCollection):
 
             try:
                 req = oauth.Request(method="POST", url=uri, parameters=params)
-            except AssertionError, e:
+            except AssertionError:
                 print 'uri: %s' % uri
                 print 'params: %s' % params
                 raise

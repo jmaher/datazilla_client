@@ -6,7 +6,7 @@ from setuptools import setup
 
 version = '1.4'
 
-deps = ['oauth2']
+deps = ['oauthlib']
 
 try:
     import json
